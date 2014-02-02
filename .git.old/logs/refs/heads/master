@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 3cb80e5f21f93ddb4482a062a58d24ea0d81116f Saulo Falcão <saulofalcao@gmail.com> 1386897595 -0500	commit (initial): primeiro commit
+3cb80e5f21f93ddb4482a062a58d24ea0d81116f 10a73fe771099c1491a1812dd252ed8f560f1aee Saulo Falcão <saulofalcao@gmail.com> 1386897722 -0500	commit: mudando o readme
+10a73fe771099c1491a1812dd252ed8f560f1aee add2eb5dcfe9c640cf01e6eb36528126cb4261c7 Saulo Falcão <saulofalcao@gmail.com> 1386902746 -0500	commit: Adicionado metodo available ao modelo de Reserva
+add2eb5dcfe9c640cf01e6eb36528126cb4261c7 ff427b4fb745a3b0b1ecb1afdfa884c536d4baeb Saulo Falcão <saulofalcao@gmail.com> 1386903581 -0500	commit: Apagados os arquivos desnecessarios - da app anterior
+ff427b4fb745a3b0b1ecb1afdfa884c536d4baeb 4b560f1dd6eb7ba671cd12b84530481e391de46a Saulo Falcão <saulofalcao@gmail.com> 1386903663 -0500	commit: Adicionados novos arquivos
+4b560f1dd6eb7ba671cd12b84530481e391de46a 4e9f1d6f6eceb933b44b961b57105ad911975efd Saulo Falcão <saulofalcao@gmail.com> 1386909556 -0500	commit: Adicionado guard, spork. Também feita funcao básica de checar quartos disponiveis. Action check_available criada, e a respectiva view também. Para testar ir em /reservas/new e digitar datas no formato 2013-12-25
+4e9f1d6f6eceb933b44b961b57105ad911975efd cd9b8f6dd852f363a64618f5cc07f3bf69774ab5 Saulo Falcão <saulofalcao@gmail.com> 1387582775 -0500	commit: Diversas modificacoes incluindo:
