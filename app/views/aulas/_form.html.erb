@@ -20,12 +20,12 @@
     <%= f.text_area :descricao %>
   </div>
   <div class="field">
-    <%= f.label :professor_id %><br>
-    <%= f.number_field :professor_id %>
+    <%= f.label :professor_nome %><br>
+    <%= f.collection_select(:professor_id, Professor.all, :id, :nome) %>
   </div>
   <div class="field">
     <%= f.label :horario %><br>
-    <%= f.date_select :horario %>
+    <%= f.datetime_select :horario %>
   </div>
   <div class="actions">
     <%= f.submit %>

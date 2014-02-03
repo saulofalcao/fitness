@@ -1,4 +1,6 @@
 ControleDeEstoque::Application.routes.draw do
+  resources :professors
+
   resources :aulas
 
   resources :reservas

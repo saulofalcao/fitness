@@ -18,7 +18,7 @@
       <tr>
         <td><%= aula.titulo %></td>
         <td><%= aula.descricao %></td>
-        <td><%= aula.professor_id %></td>
+        <td><%= @professores.find(aula.professor_id).nome %></td>
         <td><%= aula.horario %></td>
         <td><%= link_to 'Show', aula %></td>
         <td><%= link_to 'Edit', edit_aula_path(aula) %></td>

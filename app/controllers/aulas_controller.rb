@@ -5,6 +5,7 @@ class AulasController < ApplicationController
   # GET /aulas.json
   def index
     @aulas = Aula.all
+    @professores = Professor.all
   end
 
   # GET /aulas/1
