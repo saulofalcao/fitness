@@ -1,4 +1,12 @@
 ControleDeEstoque::Application.routes.draw do
+  get "users/new"
+
+  match '/cadastrar',  to: 'users#new',            via: 'get'
+  match '/ajuda',    to: 'static_pages#ajuda',    via: 'get'
+  match '/sobre',   to: 'static_pages#sobre',   via: 'get'
+  match '/contato', to: 'static_pages#contato', via: 'get'
+
+
   resources :professors
 
   resources :aulas
@@ -11,9 +19,9 @@ ControleDeEstoque::Application.routes.draw do
   post "reservas/check_available"
   
 
- # root "static_pages#home"
+  root "static_pages#home"
   #root new_reserva_path
-  root "aulas#index"
+  #root "aulas#index"
   
   #get "reservas/index"
 
