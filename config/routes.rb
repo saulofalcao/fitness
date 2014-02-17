@@ -1,12 +1,11 @@
 ControleDeEstoque::Application.routes.draw do
-  get "users/new"
 
   match '/cadastrar',  to: 'users#new',            via: 'get'
   match '/ajuda',    to: 'static_pages#ajuda',    via: 'get'
   match '/sobre',   to: 'static_pages#sobre',   via: 'get'
   match '/contato', to: 'static_pages#contato', via: 'get'
 
-
+  resources :users
   resources :professors
 
   resources :aulas
