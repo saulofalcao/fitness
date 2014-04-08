@@ -1,5 +1,9 @@
 ControleDeEstoque::Application.routes.draw do
 
+  get "transacoes/lista"
+  get "transacoes/nova"
+  get "transacoes/edita"
+  match '/signup',  to: 'users#new',            via: 'get'
   match '/cadastrar',  to: 'users#new',            via: 'get'
   match '/ajuda',    to: 'static_pages#ajuda',    via: 'get'
   match '/sobre',   to: 'static_pages#sobre',   via: 'get'
