@@ -1,10 +1,16 @@
-<!-- esse arquivo não está sendo usado - comentado o render em application.html.erb 13/01/2014 -->
-<div id="error_explanation">
-  <ul>
-  <%# @er.each do |msg| %>
-    <li>* <%#= msg %> </li>
-    <% end %>
+<% if @user.errors.any? %>
+	<div id="error_explanation">
+		<div class="alert alert-error">
+			O Formulário contém <%= pluralize(@user.errors.count, "erro") %>.
+		</div>
+		<ul>
+			<%# @er.each do |msg| %>
+			<% @user.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				
+			<% end %>
+		</ul>
+	</div>
+<% end %>
 
-    
-</div>
 
