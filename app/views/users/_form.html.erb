@@ -1,5 +1,6 @@
 <div class="row">
 	<div class="span6 offset3">
+		<%= render 'shared/error_messages' %>
 		<%= form_for(@user) do |f| %>
 			<%= f.label :nome %>
 			<%= f.text_field :nome %>
