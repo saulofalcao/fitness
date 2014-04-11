@@ -14,7 +14,7 @@ describe "User pages" do
    let(:submit) { "Cadastrar" } 
    describe "com informação invalida" do
      it "não deve criar um usuário" do
-       expect(click_button submit).to  not_to change(User, :count)
+       expect {click_button submit}.not_to change(User, :count)
      end
    end
 
@@ -26,7 +26,7 @@ describe "User pages" do
       fill_in "Confirmação da Senha",  with: "foobar"
     end
     it "deve criar um usuario" do
-      expect(click_button submit).to change(User, :count).by(1)
+      expect{click_button submit}.to change(User, :count).by(1)
     end
   end
 
