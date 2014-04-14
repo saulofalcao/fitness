@@ -11,7 +11,20 @@ describe "Authentication" do
 			before {click_button "Acessar"}
 			it { should have_title("Acessar") }
 			it { should have_selector("div.aler.alert-error") }
-		  
 		end
+
+		describe "com informação válida" do
+			let(:user) { FactoryGirl.create(:user) }
+			before do
+				fill_in "E-mail", with: user.email.upcase
+				fill_in "Senha", with: user.password
+				click_button "Acessar"
+			end
+			it { should have_title(user.nome) }
+			it { should have_link('Perfil', href: user_path(user)) }
+			it { should have_link('Desconectar', href: signout_path) }
+			it { should_not have_link('Acessar', href: signin_path) }
+		end
+		
 	end
 end
