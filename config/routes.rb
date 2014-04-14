@@ -1,8 +1,11 @@
 ControleDeEstoque::Application.routes.draw do
 
-  get "transacoes/lista"
-  get "transacoes/nova"
-  get "transacoes/edita"
+  #get "transacoes/lista"
+  #get "transacoes/nova"
+  #get "transacoes/edita"
+
+  match '/signin',  to: 'sessions#new',            via: 'get'
+  match '/signout',  to: 'sessions#destroy',            via: 'delete'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/cadastrar',  to: 'users#new',            via: 'get'
   match '/ajuda',    to: 'static_pages#ajuda',    via: 'get'
@@ -10,16 +13,16 @@ ControleDeEstoque::Application.routes.draw do
   match '/contato', to: 'static_pages#contato', via: 'get'
 
   resources :users
-  resources :professors
+  resources :sessions, only: [:new, :create, :destroy]
+  #resources :professors
+  #resources :aulas
+  #resources :reservas
 
-  resources :aulas
-
-  resources :reservas
 
   get "static_pages/home"
   get "static_pages/ajuda"
   
-  post "reservas/check_available"
+#  post "reservas/check_available"
   
 
   root "static_pages#home"
