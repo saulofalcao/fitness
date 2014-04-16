@@ -10,6 +10,10 @@ describe "StaticPages" do
     	visit '/static_pages/home'
     	page.should have_title("Finanças")
     end
+    it "deve conter o link de Acessar no menu superior" do
+      visit '/'
+      page.should have_link("Acessar")
+    end
 
   end
 

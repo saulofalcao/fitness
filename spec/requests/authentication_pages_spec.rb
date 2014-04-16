@@ -11,6 +11,11 @@ describe "Authentication" do
 			before {click_button "Acessar"}
 			it { should have_title("Acessar") }
 			it { should have_selector("div.aler.alert-error") }
+
+			describe "depois visita outra pagina" do
+				before { click_button "Início"}
+				it { should_not have_selector('div.alert.alert-error') }
+			end
 		end
 
 		describe "com informação válida" do
