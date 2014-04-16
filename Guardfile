@@ -30,6 +30,3 @@ guard 'rspec', :all_after_pass => false, cli: '--drb' do
   # Capybara request specs
   watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/requests/#{m[1]}_spec.rb" }
 end
-
-
-

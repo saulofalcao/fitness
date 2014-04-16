@@ -10,10 +10,10 @@ describe "Authentication" do
 		describe "with invalid information" do
 			before {click_button "Acessar"}
 			it { should have_title("Acessar") }
-			it { should have_selector("div.aler.alert-error") }
+			it { should have_selector("div.alert.alert-error") }
 
 			describe "depois visita outra pagina" do
-				before { click_button "Início"}
+				before { visit '/'}
 				it { should_not have_selector('div.alert.alert-error') }
 			end
 		end

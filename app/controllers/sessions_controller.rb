@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 		else
 			#cria uma mensagem de erro e render novamente o form new
 			# TODO: mostrar mensagem de clicar aqui se esqueceu a senha
-			flash[:error]="Usuário ou senha não encontrados. Por favor, tente novamente"
+			flash.now[:error]="Usuário ou senha não encontrados. Por favor, tente novamente"
 			render 'new'		
 		end
 	end
