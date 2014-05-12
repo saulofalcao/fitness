@@ -27,7 +27,7 @@ describe "Authentication" do
 			end
 			it { should have_title(user.nome) }
 			it { should have_link('Perfil', href: user_path(user)) }
-			it { should have_link('Desconectar', href: signout_path) }
+			it { should have_link('Sair', href: signout_path) }
 			it { should_not have_link('Acessar', href: signin_path) }
 		end
 		

@@ -6,6 +6,9 @@ class SessionsController < ApplicationController
 		user = User.find_by(email: params[:session][:email].downcase)
 		if user && user.authenticate(params[:session][:password])
 			# Sign in the user e redireciona a user show
+			sign_in(user)
+			flash[:success]="Olá, #{user.nome}! Bem vindo ao #{$base_name}!"
+
 			redirect_to user
 		else
 			#cria uma mensagem de erro e render novamente o form new
